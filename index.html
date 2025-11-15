@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDesign Web Solutions - Responsive</title>
+    <!-- Load Tailwind CSS via CDN - Ideal for single-file deployment -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Custom Theme Colors (Deep Green and Light Green) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-green': '#1B5E20', // Primary Color: Symbolizes growth
+                        'light-green': '#81C784', // Secondary Color: Balances layout
+                        'neutral-bg': '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles to match the original design feel */
+        .hero {
+            background-image: linear-gradient(rgba(27, 94, 32, 0.8), rgba(129, 199, 132, 0.8)), url('https://placehold.co/1200x600/1B5E20/81C784?text=Sustainable+Digital+Ecosystem');
+            background-size: cover;
+            background-position: center;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        /* Card hover effect (as planned) */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+        }
+        /* Ensures smooth scroll functionality works correctly */
+        html {
+            scroll-behavior: smooth; 
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-neutral-bg min-h-screen flex flex-col">
+
+    <!-- Navbar Component (Responsive, using Deep Green) -->
+    <header class="bg-deep-green shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-2 text-white">
+                    <svg class="h-6 w-6 text-light-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3a8.995 8.995 0 01-7.756 4M12 21a8.962 8.962 0 005.972-2.828M12 12V3"/>
+                    </svg>
+                    <span class="logo-text">EcoDesign Web Solutions</span>
+                </a>
+
+                <!-- Desktop Navigation: Links now point to section IDs -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="#home" class="text-light-green hover:text-white px-3 py-2 rounded-md font-medium transition duration-150">Home</a></li>
+                        <li><a href="#about" class="text-white hover:text-light-green px-3 py-2 rounded-md font-medium transition duration-150">About</a></li>
+                        <li><a href="#services" class="text-white hover:text-light-green px-3 py-2 rounded-md font-medium transition duration-150">Services</a></li>
+                        <li><a href="#contact" class="text-white hover:text-light-green px-3 py-2 rounded-md font-medium transition duration-150">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-light-green hover:text-white p-2 rounded-md focus:outline-none" aria-label="Toggle Menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <!-- Mobile Links now point to section IDs -->
+                <a href="#home" class="text-light-green block px-3 py-2 rounded-md text-base font-medium bg-green-800">Home</a>
+                <a href="#about" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#contact" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home) -->
+    <main class="flex-grow">
+        <section id="home" class="hero text-center py-20 lg:py-32 text-white shadow-xl">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Innovative & Sustainable Web Solutions</h1>
+                <p class="text-xl mb-8 opacity-90">Building modern, eco-friendly digital experiences that help businesses grow responsibly.</p>
+                <a href="#services" class="inline-block bg-light-green hover:bg-green-600 text-deep-green font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section (Addressing the missing content) -->
+        <section id="about" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-deep-green">About Our Sustainable Mission</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 space-y-4">
+                    <p>EcoDesign Web Solutions was founded with a simple vision — to create beautiful, sustainable websites that don’t just look good but also make a positive impact.</p>
+                    <p>Our team focuses on combining creativity with environmental awareness, using efficient code, optimized performance, and user-friendly designs. We believe that better web performance is inherently greener, reducing server load and energy consumption for every visitor.</p>
+                    <p class="font-semibold text-deep-green">Building responsibly is our commitment to the digital future.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (Responsive Grid from your plan) -->
+        <section id="services" class="py-16 bg-neutral-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 text-deep-green">Core Offerings</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Web Design -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover border-t-4 border-light-green">
+                        <img src="https://placehold.co/400x250/1B5E20/FFFFFF?text=Web+Design" alt="Web Design" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2 text-deep-green">Web Design</h3>
+                        <p class="text-gray-600">Clean, responsive, and user-centered designs for all types of businesses, built for maximum efficiency.</p>
+                    </div>
+
+                    <!-- Service Card 2: SEO Optimization -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover border-t-4 border-light-green">
+                        <img src="https://placehold.co/400x250/1B5E20/FFFFFF?text=SEO+Optimization" alt="SEO Optimization" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2 text-deep-green">SEO Optimization</h3>
+                        <p class="text-gray-600">Helping your website rank better on search engines while maintaining eco-friendly practices and performance.</p>
+                    </div>
+
+                    <!-- Service Card 3: Consulting -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover border-t-4 border-light-green">
+                        <img src="https://placehold.co/400x250/1B5E20/FFFFFF?text=Performance+Audit" alt="Performance Audit" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2 text-deep-green">Performance Consulting</h3>
+                        <p class="text-gray-600">Audits focused on code efficiency, green hosting options, and reducing digital carbon footprints.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Form from your plan) -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 bg-neutral-bg p-8 rounded-xl shadow-2xl border-t-4 border-deep-green">
+                <h2 class="text-3xl font-bold text-center mb-8 text-deep-green">Get in Touch</h2>
+                <form id="contactForm">
+                    <!-- Name Input -->
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name:</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-light-green focus:border-light-green transition duration-150">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address:</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-light-green focus:border-light-green transition duration-150">
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message:</label>
+                        <textarea id="message" name="message" required rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-light-green focus:border-light-green transition duration-150"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-deep-green hover:bg-green-700 text-white font-bold py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                    <!-- Success/Error Message Box -->
+                    <div id="status-message" class="mt-4 text-center font-semibold hidden p-3 rounded-lg"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-deep-green text-white p-6 text-center mt-auto">
+        <p class="text-sm">&copy; 2025 EcoDesign Web Solutions | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Smooth Scrolling, and Form Validation -->
+    <script>
+        // 1. Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 2. Smooth Scrolling for all internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Prevent default behavior only if the href is not just '#'
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Hide mobile menu after clicking a link
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // 3. Simple Form Submission Handler with basic validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const statusMessage = document.getElementById('status-message');
+            
+            // Reset message classes
+            statusMessage.classList.remove('hidden', 'bg-red-200', 'text-red-800', 'bg-light-green', 'text-deep-green');
+
+            // Client-side validation check (in case user tries to submit empty fields)
+            if (!name || !email || !message) {
+                 statusMessage.textContent = 'Oops! Please fill out all required fields before sending.';
+                 statusMessage.classList.add('bg-red-200', 'text-red-800', 'block');
+                 return;
+            }
+
+            // Simulate form processing delay
+            setTimeout(() => {
+                // Clear the form fields
+                document.getElementById('contactForm').reset();
+
+                // Display a success message
+                statusMessage.textContent = 'Message sent successfully! We will get back to your eco-friendly inquiry soon.';
+                statusMessage.classList.add('bg-light-green', 'text-deep-green', 'block');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
